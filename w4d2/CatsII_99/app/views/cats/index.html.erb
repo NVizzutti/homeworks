@@ -1,0 +1,35 @@
+<table>
+  <tr>
+    <th>Attribute Name</th>
+    <th>Value</th>
+  </tr>
+  <% @cats.each do |cat| %>
+  <tr>
+    <td>Name:</td>
+    <td><%= link_to cat.name, cat_url(cat) %></td>
+  </tr>
+  <tr>
+    <td>Sex:</td>
+    <td><%= cat.sex %></td>
+  </tr>
+  <tr>
+    <td>Birthday:</td>
+    <td><%= cat.birth_date %></td>
+  </tr>
+  <tr>
+    <td>Color:</td>
+    <td><%= cat.color %></td>
+  </tr>
+  <tr>
+    <td>Description:</td>
+    <td><%= cat.description %></td>
+  </tr>
+  <% end %>
+
+</table>
+
+<footer>
+<% content_for :footer do %>
+<%= current_user ? "You are signed in as #{current_user.user_name}" : '' %>
+<% end  %>
+</footer>

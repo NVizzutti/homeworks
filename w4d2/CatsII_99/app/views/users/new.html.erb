@@ -1,0 +1,20 @@
+<u><h2>Sign Up!</h2></u>
+
+<form action="<%= users_url %>" method="post">
+  <%= auth_token %>
+  <label>Username</label>
+  <input type="text" name="user[user_name]">
+  <br>
+
+  <label>Password</label>
+  <input type="password" name="user[password]">
+  <br>
+
+  <input type="submit">
+</form>
+<br>
+<footer>
+  <% content_for :footer do %>
+  <%= current_user ? "Hello, #{current_user.user_name}." : "Sign Up!" %>
+  <% end  %>
+</footer>

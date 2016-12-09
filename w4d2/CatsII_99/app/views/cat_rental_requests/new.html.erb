@@ -1,0 +1,28 @@
+<u><h2>New Cat Rental Request</h2></u>
+
+<form action="<%= cat_rental_requests_url %>" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+  <label value="Cat">Cat</label>
+  <select name="cat_rental_request[cat_id]">
+    <option disabled>--Please Choose--</option>
+    <% @cats.each do |cat|  %>
+      <option value="<%= cat.id %>"><%= cat.name %></option>
+    <% end %>
+  </select>
+  <br>
+
+  <label value="Start Date">Start Date</label>
+  <input type="date" name="cat_rental_request[start_date]">
+  <br>
+
+  <label value="End Date">End Date</label>
+  <input type="date" name="cat_rental_request[end_date]">
+  <br>
+  <footer>
+  <% content_for :footer do %>
+  <%= current_user ? "You are signed in as #{current_user.user_name}" : '' %>
+  <% end  %>
+</footer>
+  <input type="submit">
+</form>

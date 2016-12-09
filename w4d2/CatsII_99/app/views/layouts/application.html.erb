@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <div align="right">
+    <%= button_to "Index", cats_url, method: :get %>
+    <%= current_user ? current_user.user_name : "" %>
+    <% if current_user %>
+      <%= button_to "Logout", "/session", method: :delete %>
+      <%= button_to "Submit Cat", "/cats/new", method: :get %>
+    <% else %>
+      <%= button_to "Login", new_session_url, method: :get %>
+      <%= button_to "Signup", new_users_url, method: :get %>
+    <% end %>
+  </div>
+  <title>Cats99</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="container">
+
+<%= yield %>
+
+<footer> <%= yield :footer %></footer>
+</body>
+</html>
