@@ -1,0 +1,9 @@
+<h1>Cats upon cats!</h1> <h2 align='right'><%= "#{current_user.user_name}" %></h2>
+
+<ul>
+  <% @cats.each do |cat| %>
+    <li><%= link_to cat.name, cat_url(cat) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Create cat", new_cat_url %>
