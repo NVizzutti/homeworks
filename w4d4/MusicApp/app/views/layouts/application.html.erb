@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <div align='right'>
+    <% if current_user %>
+    <%= button_to "Profile", user_url(current_user), method: 'get'%>
+    <%= button_to "Logout", session_url, method: 'delete' %>
+    <br><%= link_to "View Bands", bands_url %><br>
+    <%= link_to "Add Band", new_band_url, method: 'get' %>
+    <% else %>
+    <%= button_to "Sign-In", new_session_url, method: 'get' %>
+    <%= button_to "Sign-Up", new_user_url, method: 'get' %>
+    <% end %>
+  </div>
+  <title>MusicApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+<footer>
+  <%= current_user ? "Logged in as #{current_user.email}" : "Sign up for more stuff" %>
+</html>

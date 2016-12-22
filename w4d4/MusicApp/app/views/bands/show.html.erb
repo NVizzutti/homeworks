@@ -1,0 +1,9 @@
+
+<h2 align='center'> <%= @band.name %></h2>
+  <table width = '300px' align='center'>
+  <tr align='center'>  <th><u>Band Name</u></th></tr>
+  <tr align='center'>  <th>Albums</th></tr>
+  <td align='center'> <% @band.albums.each do |album| %>
+    <%= album.title %> <br>
+  <% end  %>
+</table>

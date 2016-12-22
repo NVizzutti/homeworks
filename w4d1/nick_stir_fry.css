@@ -3,18 +3,41 @@
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
+  margin: 0;
+  padding: 0;
 }
 body {
-  line-height: 1.5;
-  background-color: snow;
+  font-family: inherit;
+  background-color: transparent;
+}
+
+.top-tag {
+  position: fixed;
+  width: 100%;
+  background-color: darkblue;
+  opacity: 0;
+  transition: 1s;
+}
+header {
+  height: auto;
+  align-content: center;
+  text-align: center;
+  opacity: .8;
+}
+.top-tag:hover {
+  opacity: 1;
+  transition: 1s;
 }
 ol, ul {
-  list-style: circle;;
+  line-height: 2
+  list-style: circle;
 }
 h1 {
+  font-family: sans-serif;
   text-decoration: underline;
 }
 h2 {
+  font-family: sans-serif;
   align-content: center;
   font-variant: small-caps;
   font-size: 30;
@@ -29,10 +52,47 @@ p {
 ul {
   font-size: 18;
   font-kerning: normal;
-  font-variant: small-caps;
+  font-variant: normal;
 }
 ol {
-  font-size: 22;
+  font-size: 20;
   font-weight: lighter;
+  line-height: 1.5
   font-family: sans-serif;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background-image: url('smooth-star.jpg');
+  vertical-align: bottom;
+}
+
+input[type="radio"]:checked {
+  -webkit-filter: brightness(80%);
+  width: 20px;
+  height: 20px;
+  background-image: url('smooth-star.jpg');
+  vertical-align: bottom;
+
+}
+
+#ingredients {
+  text-align: left;
+  align-content: left;
+}
+
+#directions {
+  font-size: 28;
+}
+
+#feedback {
+  text-align: center;
+  border-top: 1px dotted black;
+  padding: 10px;
+}
+
+input:last-child:hover {
+  -webkit-filter: brightness(80%);
 }

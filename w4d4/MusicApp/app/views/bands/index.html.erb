@@ -1,0 +1,11 @@
+<h2 align='center'> List of Bands </h2>
+  <% Band.all.each do |band| %>
+  <table width = '500px' border='2px' align='center'>
+  <tr align='center'>  <th><u>Band Name</u></th></tr>
+  <td align='center'>  <%= link_to "#{band.name}", band_url(band) %></td>
+  <tr align='center'>  <th>Albums</th></tr>
+  <td align='center'> <% band.albums.each do |album| %>
+    <%= "#{album.title}" %> </td><br>
+  <% end  %>
+  <% end  %>
+</table>
