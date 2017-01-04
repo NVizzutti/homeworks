@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mail</title>
+    <script type="text/javascript" src='./lib/bundle.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  </head>
+  <style>
+    h1, h2, h3, h4, h5, h6 {
+      float: left;
+      padding: 4px;
+    }
+    li {
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    li:hover {
+      color: red;
+    }
+
+    marquee:hover {
+      transition: 1s;
+      opacity: .3
+    }
+  </style>
+  <body>
+    <h1>E-Mail</h1>
+    <marquee scrollamount='1'><h6>Mail </h6><h5> Mail </h5> <h4> Mail </h4> <h3> Mail </h3> <h2> Mail </h2> <h1> Mail </h1><h2> Mail </h2> <h3> Mail </h3> <h4> Mail </h4> <h5> Mail </h5><h6>Mail</h6> </marquee>
+    <ul class='sidebar'>
+      <li>Inbox</li> |
+      <li>Outbox</li> |
+      <li>Sent Mail</li> |
+      <li>Drafts</li> |
+      <br>
+      <content>Some Content</content>
+    </ul>
+  </body>
+</html>
