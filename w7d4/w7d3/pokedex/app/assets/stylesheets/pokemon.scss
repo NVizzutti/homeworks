@@ -1,0 +1,111 @@
+// Place all the styles related to the Pokemon controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.pokemon-index {
+  list-style-type: decimal;
+  width: 300px;
+  overflow: scroll;
+  height: 800px;
+
+  img {
+    width: 50px;
+    height: 50px;
+  }
+
+  li {
+    border: 1px solid grey;
+    width: 100%;
+  }
+
+  li:hover {
+    cursor: pointer;
+  }
+
+  span {
+    font-size: 14px;
+  }
+}
+
+.pokemon-details {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  img {
+    width: 200px;
+  }
+
+  .pokemon-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+    height: 150px;
+
+    img {
+      transition-duration: 0.5s;
+
+      width: 100px;
+    }
+
+    img:hover {
+      transition-duration: 0.5s;
+
+      width: 120px;
+    }
+
+    .item-active {
+      // background-color: pink;
+      img {
+        transition-duration: 0.5s;
+        width: 150px;
+      }
+    }
+  }
+
+
+  .item-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 20px;
+    font-weight: bold;
+
+    span {
+      font-size: 16px;
+      font-weight: normal;
+    }
+  }
+}
+
+.pokemons {
+  display: flex;
+  flex-direction: row;
+}
+
+.pokemon-create {
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    font-size: 16px;
+
+    label {
+        margin: 10px 0;
+    }
+
+    input {
+      height: 30px;
+      font-size: 16px;
+    }
+  }
+
+
+
+}
